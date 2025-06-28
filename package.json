@@ -1,0 +1,60 @@
+{
+  "name": "glucobuddy-website",
+  "version": "1.0.0",
+  "description": "Marketing website for GlucoBuddy - Smart Diabetes Management App",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "python -m http.server 8000",
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint js/**/*.js",
+    "format": "prettier --write .",
+    "optimize": "npm run build && npm run minify",
+    "minify": "terser js/*.js -o dist/js/bundle.min.js && cleancss css/*.css -o dist/css/bundle.min.css"
+  },
+  "keywords": [
+    "diabetes",
+    "glucose monitoring",
+    "AI food recognition",
+    "health app",
+    "blood sugar",
+    "diabetes management",
+    "healthcare",
+    "mobile app"
+  ],
+  "author": "GlucoBuddy Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glucobuddy/website.git"
+  },
+  "homepage": "https://glucobuddy.github.io",
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "gh-pages": "^6.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "terser": "^5.0.0",
+    "clean-css-cli": "^5.0.0",
+    "@vitejs/plugin-legacy": "^5.0.0",
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "swiper": "^11.0.0",
+    "lottie-web": "^5.12.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

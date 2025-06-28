@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlucoBuddy - Smart Diabetes Management App</title>
+    <meta name="description" content="Revolutionary diabetes management app with AI food recognition, Bluetooth glucose meter integration, and personalized health insights.">
+    <meta name="keywords" content="diabetes, glucose monitoring, AI food recognition, health app, blood sugar">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="GlucoBuddy - Smart Diabetes Management">
+    <meta property="og:description" content="Take control of your diabetes with AI-powered food recognition and smart glucose monitoring.">
+    <meta property="og:image" content="./assets/og-image.jpg">
+    <meta property="og:url" content="https://glucobuddy.github.io">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="./assets/logo.png" alt="GlucoBuddy Logo" class="logo-img">
+                <span class="logo-text">GlucoBuddy</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#feedback" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn-secondary" onclick="openModal('loginModal')">Login</button>
+                <button class="btn-primary" onclick="openModal('registerModal')">Get Started</button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Take Control of Your <span class="gradient-text">Diabetes</span> with AI
+                    </h1>
+                    <p class="hero-description">
+                        Revolutionary diabetes management app featuring AI food recognition, 
+                        Bluetooth glucose meter integration, and personalized health insights. 
+                        Join thousands who've transformed their diabetes care.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">Active Users</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Accuracy Rate</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4.8★</span>
+                            <span class="stat-label">User Rating</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <button class="btn-primary btn-large" onclick="openModal('registerModal')">
+                            <i class="fas fa-download"></i>
+                            Download Free
+                        </button>
+                        <button class="btn-secondary btn-large" onclick="playVideo()">
+                            <i class="fas fa-play"></i>
+                            Watch Demo
+                        </button>
+                    </div>
+                    
+                    <div class="download-badges">
+                        <a href="#" class="badge-link">
+                            <img src="./assets/app-store-badge.png" alt="Download on App Store">
+                        </a>
+                        <a href="#" class="badge-link">
+                            <img src="./assets/google-play-badge.png" alt="Get it on Google Play">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="phone-mockup">
+                        <img src="./assets/app-screenshot-1.png" alt="GlucoBuddy App Screenshot" class="phone-screen">
+                        <div class="floating-elements">
+                            <div class="floating-card glucose-card">
+                                <i class="fas fa-tint"></i>
+                                <span>Glucose: 6.2 mmol/L</span>
+                            </div>
+                            <div class="floating-card ai-card">
+                                <i class="fas fa-brain"></i>
+                                <span>AI Recognition: 94%</span>
+                            </div>
+                            <div class="floating-card bluetooth-card">
+                                <i class="fab fa-bluetooth"></i>
+                                <span>Device Connected</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Video Modal -->
+        <div id="videoModal" class="modal">
+            <div class="modal-content video-modal">
+                <span class="close" onclick="closeModal('videoModal')">&times;</span>
+                <div class="video-container">
+                    <iframe id="demoVideo" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features for Better Health</h2>
+                <p class="section-description">
+                    Advanced technology meets intuitive design to give you complete control over your diabetes management.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="feature-title">AI Food Recognition</h3>
+                    <p class="feature-description">
+                        Snap a photo and instantly get accurate nutritional information. 
+                        Our AI recognizes thousands of foods with 95% accuracy.
+                    </p>
+                    <ul class="feature-list">
+                        <li>✓ Instant food identification</li>
+                        <li>✓ Accurate calorie counting</li>
+                        <li>✓ Carb and sugar analysis</li>
+                        <li>✓ Portion size estimation</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-bluetooth"></i>
+                    </div>
+                    <h3 class="feature-title">Bluetooth Integration</h3>
+                    <p class="feature-description">
+                        Connect your glucose meter wirelessly. Automatic data sync 
+                        with real-time monitoring and historical data analysis.
+                    </p>
+                    <ul class="feature-list">
+                        <li>✓ Real-time glucose sync</li>
+                        <li>✓ Multiple device support</li>
+                        <li>✓ Historical data import</li>
+                        <li>✓ Automatic logging</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Smart Analytics</h3>
+                    <p class="feature-description">
+                        Advanced analytics provide personalized insights, trend analysis, 
+                        and predictive health recommendations.
+                    </p>
+                    <ul class="feature-list">
+                        <li>✓ Glucose pattern analysis</li>
+                        <li>✓ BMI/BMR calculations</li>
+                        <li>✓ Personalized recommendations</li>
+                        <li>✓ Risk assessment</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="feature-title">Health Insights</h3>
+                    <p class="feature-description">
+                        Get personalized health advice, meal planning suggestions, 
+                        and exercise recommendations based on your data.
+                    </p>
+                    <ul class="feature-list">
+                        <li>✓ Personalized meal plans</li>
+                        <li>✓ Exercise recommendations</li>
+                        <li>✓ Health risk alerts</li>
+                        <li>✓ Progress tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How GlucoBuddy Works</h2>
+                <p class="section-description">Simple steps to better diabetes management</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Download & Setup</h3>
+                        <p>Download the app and complete your health profile in minutes</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Connect Devices</h3>
+                        <p>Pair your glucose meter via Bluetooth for automatic data sync</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Track & Analyze</h3>
+                        <p>Log meals with AI recognition and monitor glucose patterns</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Get Insights</h3>
+                        <p>Receive personalized recommendations and health insights</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Plan</h2>
+                <p class="section-description">
+                    Start free and upgrade as your needs grow. All plans include core diabetes management features.
+                </p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Free</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">0</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="pricing-description">Perfect for getting started with diabetes management</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Basic glucose logging</li>
+                        <li><i class="fas fa-check"></i> Manual food entry</li>
+                        <li><i class="fas fa-check"></i> Basic charts and reports</li>
+                        <li><i class="fas fa-check"></i> 30-day data history</li>
+                        <li><i class="fas fa-times"></i> AI food recognition</li>
+                        <li><i class="fas fa-times"></i> Bluetooth device sync</li>
+                        <li><i class="fas fa-times"></i> Advanced analytics</li>
+                    </ul>
+                    <button class="btn-secondary btn-full" onclick="openModal('registerModal')">Get Started Free</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Pro</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">9.99</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="pricing-description">Complete diabetes management with AI and Bluetooth</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Free</li>
+                        <li><i class="fas fa-check"></i> AI food recognition</li>
+                        <li><i class="fas fa-check"></i> Bluetooth device sync</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> Unlimited data history</li>
+                        <li><i class="fas fa-check"></i> Personalized insights</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <button class="btn-primary btn-full" onclick="openModal('registerModal')">Start Pro Trial</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Family</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">19.99</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="pricing-description">Perfect for families managing diabetes together</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Pro</li>
+                        <li><i class="fas fa-check"></i> Up to 5 family accounts</li>
+                        <li><i class="fas fa-check"></i> Shared data insights</li>
+                        <li><i class="fas fa-check"></i> Family health reports</li>
+                        <li><i class="fas fa-check"></i> Caregiver notifications</li>
+                        <li><i class="fas fa-check"></i> Dedicated support</li>
+                        <li><i class="fas fa-check"></i> Custom meal plans</li>
+                    </ul>
+                    <button class="btn-secondary btn-full" onclick="openModal('registerModal')">Start Family Plan</button>
+                </div>
+            </div>
+
+            <div class="pricing-guarantee">
+                <div class="guarantee-content">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h4>30-Day Money-Back Guarantee</h4>
+                        <p>Try GlucoBuddy risk-free. If you're not satisfied, get a full refund within 30 days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">
+                    Get answers to common questions about GlucoBuddy and diabetes management.
+                </p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How accurate is the AI food recognition?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our AI food recognition system achieves 95% accuracy across thousands of food items. It's trained on extensive databases including McDonald's, local cuisines, and home-cooked meals. The system continuously learns and improves with user feedback.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Which glucose meters are compatible?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>GlucoBuddy supports major glucose meter brands including Accu-Chek, OneTouch, FreeStyle Libre, Contour, and Dexcom. Our Bluetooth integration works with any meter that supports Bluetooth LE connectivity.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Is my health data secure and private?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We use bank-level encryption and comply with HIPAA regulations. Your data is stored securely and never shared with third parties without your explicit consent. You have full control over your data.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Can I use GlucoBuddy without a smartphone?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>GlucoBuddy is designed as a mobile app for iOS and Android. However, you can access your data and reports through our web dashboard on any computer or tablet with internet access.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How does the BMI/BMR calculator work?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our calculator uses medically-approved formulas (Mifflin-St Jeor for BMR) and provides personalized recommendations based on your age, gender, height, and weight. It integrates with your glucose data to provide comprehensive health insights.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What makes GlucoBuddy different from other apps?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>GlucoBuddy combines AI food recognition, real Bluetooth glucose meter integration, and advanced analytics in one app. Our personalized insights and actionable health recommendations are based on your actual data patterns, not generic advice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback/Reviews Section -->
+    <section id="feedback" class="feedback">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Users Say</h2>
+                <p class="section-description">
+                    Join thousands of satisfied users who've transformed their diabetes management with GlucoBuddy.
+                </p>
+            </div>
+
+            <div class="feedback-grid" id="feedbackGrid">
+                <!-- Feedback items will be loaded dynamically -->
+            </div>
+
+            <div class="feedback-form-container">
+                <h3>Share Your Experience</h3>
+                <form id="feedbackForm" class="feedback-form">
+                    <div class="form-group">
+                        <label for="feedbackName">Your Name</label>
+                        <input type="text" id="feedbackName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackEmail">Email (optional)</label>
+                        <input type="email" id="feedbackEmail">
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackRating">Rating</label>
+                        <div class="rating-input">
+                            <span class="star" data-rating="1">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="5">★</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackMessage">Your Review</label>
+                        <textarea id="feedbackMessage" rows="4" required placeholder="Tell us about your experience with GlucoBuddy..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-description">
+                    Have questions? We're here to help you succeed with your diabetes management.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Support</h4>
+                            <p>support@glucobuddy.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone Support</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Support Hours</h4>
+                            <p>Mon-Fri: 9AM-6PM EST</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Subject</label>
+                        <select id="contactSubject" required>
+                            <option value="">Select a topic</option>
+                            <option value="support">Technical Support</option>
+                            <option value="billing">Billing Question</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./assets/logo.png" alt="GlucoBuddy Logo">
+                        <span>GlucoBuddy</span>
+                    </div>
+                    <p>Empowering people with diabetes to live healthier, more confident lives through smart technology.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#">Download</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 GlucoBuddy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Get Started with GlucoBuddy</h2>
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="regName">Full Name</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPlan">Choose Plan</label>
+                    <select id="regPlan" required>
+                        <option value="free">Free Plan</option>
+                        <option value="pro">Pro Plan ($9.99/month)</option>
+                        <option value="family">Family Plan ($19.99/month)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary btn-full">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Welcome Back</h2>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn-primary btn-full">Sign In</button>
+                <p class="auth-link">Don't have an account? <a href="#" onclick="closeModal('loginModal'); openModal('registerModal')">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="chatbot">
+        <div class="chatbot-header" onclick="toggleChatbot()">
+            <i class="fas fa-comments"></i>
+            <span>Ask about GlucoBuddy</span>
+            <i class="fas fa-chevron-up" id="chatbot-toggle"></i>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Hi! I'm here to help you learn about GlucoBuddy. Ask me anything about our features, pricing, or diabetes management!
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input" placeholder="Type your question...">
+                <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/chatbot.js"></script>
+    <script src="./js/feedback.js"></script>
+</body>
+</html>
