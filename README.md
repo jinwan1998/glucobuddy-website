@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 # 🌐 GlucoBuddy Marketing Website
 
 A modern, responsive marketing website for the GlucoBuddy diabetes management mobile app. Built with vanilla HTML, CSS, and JavaScript for optimal performance and SEO.
+
+## 🚀 Live Website
+
+Visit the live website: [https://jinwan1998.github.io/glucobuddy-website/](https://jinwan1998.github.io/glucobuddy-website/)
 
 ## ✨ Features
 
@@ -284,3 +289,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Built with ❤️ for the diabetes community by the GlucoBuddy team.
+=======
+# glucobuddy-website
+Marketing website for GlucoBuddy diabetes management app
+>>>>>>> 677b052f4a60de1d6ac4bb151e21466991a5e74d

@@ -33,6 +33,19 @@ git commit -m "%commit_msg%"
 REM Push to GitHub
 echo 🚀 Pushing to GitHub...
 git push -u origin main
+if errorlevel 1 (
+    echo ⚠️  Push failed, trying to resolve conflicts...
+    echo 🔄 Pulling remote changes first...
+    git pull origin main --allow-unrelated-histories
+    if errorlevel 1 (
+        echo ❌ Merge conflicts detected. Please resolve manually or use force push.
+        echo 💡 To force push (will overwrite remote): git push -u origin main --force
+        pause
+        exit /b 1
+    )
+    echo 🚀 Retrying push...
+    git push -u origin main
+)
 
 echo.
 echo ✅ Deployment completed!
