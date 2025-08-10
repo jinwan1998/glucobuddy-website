@@ -252,7 +252,7 @@ function playVideo() {
     const iframe = document.getElementById('demoVideo');
     
     // Set video URL (replace with actual demo video)
-    iframe.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1';
+    iframe.src = 'https://youtu.be/25Jj9aSZsEc?si=tzPJkjd_d8lpq04l';
     
     openModal('videoModal');
     trackEvent('demo_video_played');
