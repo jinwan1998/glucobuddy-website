@@ -7,7 +7,7 @@ let feedbackData = [
         name: "Sarah Chen",
         rating: 5,
         message: "GlucoBuddy has completely transformed how I manage my diabetes. The AI food recognition is incredibly accurate - it even recognized my homemade Malaysian curry! The Bluetooth sync with my Accu-Chek meter saves so much time.",
-        date: "2024-01-15",
+        date: "2025-06-15",
         verified: true,
         plan: "pro",
         avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
@@ -17,7 +17,7 @@ let feedbackData = [
         name: "Michael Rodriguez",
         rating: 5,
         message: "As a Type 1 diabetic for 15 years, I've tried every app out there. GlucoBuddy's analytics and personalized recommendations are game-changing. The BMI/BMR calculator with glucose correlation insights helped me optimize my diet.",
-        date: "2024-01-12",
+        date: "2025-06-12",
         verified: true,
         plan: "family",
         avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
@@ -27,7 +27,7 @@ let feedbackData = [
         name: "Jennifer Park",
         rating: 4,
         message: "Love the app! The food photo recognition works great for restaurant meals. My only wish is for more Asian food options in the database, but the team is constantly improving it. Customer support is excellent too.",
-        date: "2024-01-10",
+        date: "2025-06-10",
         verified: true,
         plan: "pro",
         avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
@@ -37,7 +37,7 @@ let feedbackData = [
         name: "David Thompson",
         rating: 5,
         message: "The Bluetooth integration with my FreeStyle Libre is seamless. No more manual logging! The trend analysis helped me identify patterns I never noticed before. Worth every penny of the Pro subscription.",
-        date: "2024-01-08",
+        date: "2025-06-08",
         verified: true,
         plan: "pro",
         avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
@@ -47,7 +47,7 @@ let feedbackData = [
         name: "Lisa Wang",
         rating: 5,
         message: "Managing diabetes for my whole family (3 diabetics) was overwhelming until we found GlucoBuddy. The Family plan lets us share insights and support each other. The AI recognition even works for my kids' school lunches!",
-        date: "2024-01-05",
+        date: "2025-06-05",
         verified: true,
         plan: "family",
         avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
@@ -57,7 +57,7 @@ let feedbackData = [
         name: "Robert Johnson",
         rating: 4,
         message: "Great app for diabetes management. The glucose meter sync works perfectly with my OneTouch Verio. The health recommendations are practical and easy to follow. Looking forward to more features!",
-        date: "2024-01-03",
+        date: "2025-06-03",
         verified: true,
         plan: "pro",
         avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
