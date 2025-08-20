@@ -209,7 +209,16 @@ function calculateMatchScore(message, keywords) {
 }
 
 function isGreeting(message) {
-    const greetings = ['hi', 'hello', 'hey', 'good morning', 'good afternoon', 'good evening'];
+    const greetings = ['hi', 'hello', 'hey', 'good morning', 'good afternoon', 'good evening'，
+  {
+    keywords: ["advertising plans", "merchant plans", "pricing tiers"],
+    response: "We offer three advertising plans for merchants: Basic, Premium, and Enterprise. Each plan is tailored to meet different business needs. Please refer to the Pricing section for detailed features and pricing."
+  },
+  {
+    keywords: ["user rewards", "earn points", "redeem benefits", "user levels"],
+    response: "Our user rewards system allows you to earn points through engagement. As you accumulate points, you can level up and redeem benefits. Check the Pricing section for more details."
+  }
+];
     return greetings.some(greeting => message.includes(greeting));
 }
 
