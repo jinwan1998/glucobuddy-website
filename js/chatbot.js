@@ -26,12 +26,12 @@ const chatbotKnowledge = {
     // Pricing and plans
     'pricing': {
         response: "We offer three advertising plans for merchants: Basic, Premium, and Enterprise. Each plan is tailored to meet different business needs. Please refer to the Pricing section for detailed features and pricing.",
-        keywords: ['price', 'cost', 'plan', 'subscription', 'free', 'pro', 'family', 'money', 'guarantee', "advertising plans", "merchant plans", "pricing tiers"]
+        keywords: ['price', 'cost', 'plan', 'subscription', 'free', 'pro', 'family', 'money', 'guarantee', 'advertising plans', 'merchant plans', 'pricing tiers']
     },
     
     'free trial': {
         response: "Our user rewards system allows you to earn points through engagement. As you accumulate points, you can level up and redeem benefits. Check the Pricing section for more details",
-        keywords: ['trial', 'free', 'demo', 'test', 'try', "user rewards", "earn points", "redeem benefits", "user levels"]
+        keywords: ['trial', 'free', 'demo', 'test', 'try', 'user rewards', 'earn points', 'redeem benefits', 'user levels']
     },
     
     // Technical support
