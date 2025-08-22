@@ -25,13 +25,13 @@ const chatbotKnowledge = {
     
     // Pricing and plans
     'pricing': {
-        response: "We offer 3 plans: FREE (basic logging, 30-day history), PRO ($9.99/month with AI recognition, Bluetooth sync, unlimited history), and FAMILY ($19.99/month for up to 5 accounts). All plans include a 30-day money-back guarantee!",
-        keywords: ['price', 'cost', 'plan', 'subscription', 'free', 'pro', 'family', 'money', 'guarantee']
+        response: "We offer three advertising plans for merchants: Basic, Premium, and Enterprise. Each plan is tailored to meet different business needs. Please refer to the Pricing section for detailed features and pricing.",
+        keywords: ['price', 'cost', 'plan', 'subscription', 'free', 'pro', 'family', 'money', 'guarantee', "advertising plans", "merchant plans", "pricing tiers"]
     },
     
     'free trial': {
-        response: "Yes! You can start with our completely free plan that includes basic glucose logging and manual food entry. Pro features come with a 7-day free trial, and we offer a 30-day money-back guarantee on all paid plans.",
-        keywords: ['trial', 'free', 'demo', 'test', 'try']
+        response: "Our user rewards system allows you to earn points through engagement. As you accumulate points, you can level up and redeem benefits. Check the Pricing section for more details",
+        keywords: ['trial', 'free', 'demo', 'test', 'try', "user rewards", "earn points", "redeem benefits", "user levels"]
     },
     
     // Technical support
